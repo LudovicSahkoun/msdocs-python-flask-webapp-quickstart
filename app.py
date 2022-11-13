@@ -5,7 +5,7 @@ app = Flask(__name__)
 
 
 @app.route('/home/<lower>/<upper>')
-def create(lower,upper):
+def index(lower,upper):
     result=numerical_integration(float(lower),float(upper))
     return "<h1>%s</h1>" % str(result)
     
